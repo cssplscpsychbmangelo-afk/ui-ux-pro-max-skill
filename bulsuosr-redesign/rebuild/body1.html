@@ -1,0 +1,407 @@
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- Utility bar: the institution this office belongs to, and the official pages
+     a student may need before reading anything else. -->
+<div class="u-bar">
+  <div class="shell u-bar__inner">
+    <span class="u-bar__label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8v13h6v-6h6v6h6V8Z"/></svg>
+      Bulacan State University
+    </span>
+    <nav class="u-bar__links" aria-label="Official university links">
+      <a href="https://www.bulsu.edu.ph/" target="_blank" rel="noopener">University site</a>
+      <a href="https://www.facebook.com/BulSUSG1983/" target="_blank" rel="noopener">Student Government</a>
+      <a href="#about" data-nav>About the Office</a>
+    </nav>
+  </div>
+</div>
+
+<header class="header" id="header" role="banner">
+  <div class="shell header__inner">
+    <a class="brand" href="#home" data-nav aria-label="Office of the Student Regent, Bulacan State University — home">
+      <span class="brand__mark" aria-hidden="true"><img class="osr-mark" src="/osr-mark.svg" alt="" width="51" height="34"></span>
+      <span class="brand__text">
+        <b>Office of the Student Regent</b>
+        <span>Bulacan State University · Board of Regents</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__link" href="#about" data-nav>About</a>
+      <a class="nav__link" href="#announcements" data-nav>Announcements</a>
+      <a class="nav__link" href="#board-meetings" data-nav>Board records</a>
+      <a class="nav__link" href="#initiatives" data-nav>Initiatives</a>
+      <a class="nav__link" href="#resources" data-nav>Resources</a>
+      <a class="nav__link" href="#help" data-nav>Student help</a>
+    </nav>
+    <div class="header__actions">
+      <form class="search-inline" id="headerSearchForm" role="search" aria-label="Search this site">
+        <label class="sr-only" for="headerSearch">Search announcements, meetings, initiatives and resources</label>
+        <input id="headerSearch" type="search" placeholder="Search records…" autocomplete="off">
+        <button type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </button>
+      </form>
+      <div class="more">
+        <button class="header-menu-btn" id="moreBtn" type="button" aria-expanded="false" aria-controls="morePanel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+          <span>More</span>
+        </button>
+        <div class="more__panel" id="morePanel" hidden>
+          <p class="more__group" id="moreGroupLabel">Records &amp; services</p>
+          <a class="more__link" href="#academic-calendar" data-nav>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+            <span><b>Academic calendar</b><span>University dates, days remaining</span></span>
+          </a>
+          <a class="more__link" href="#track" data-nav>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <span><b>Track my concern</b><span>Check a tracking code</span></span>
+          </a>
+          <a class="more__link" href="#ideal-bulsu" data-nav>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg>
+            <span><b>Build your Ideal BulSU</b><span>Student consultation, 10 points</span></span>
+          </a>
+          <a class="more__link" href="#search" data-nav>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/><path d="M8 11h6"/></svg>
+            <span><b>Site-wide search</b><span>Announcements, Board, initiatives</span></span>
+          </a>
+          <button class="more__link" id="cmdBtn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg>
+            <span><b>Command palette</b><span>Jump anywhere</span></span>
+            <span class="more__kbd" aria-hidden="true">Ctrl/⌘ K</span>
+          </button>
+        </div>
+      </div>
+      <a class="btn btn--red" href="#help" data-nav>
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
+        <span class="btn__label">Raise a concern</span>
+      </a>
+      <button class="icon-btn search-toggle" id="searchToggle" type="button" aria-label="Search this site">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="header-menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Menu: every route the site has, plus the two things a student looks for
+     first — raise a concern, and the Board archive. -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer__backdrop" id="drawerBackdrop"></div>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site navigation">
+    <div class="drawer__head">
+      <span class="drawer__title">
+        <img class="osr-mark" src="/osr-mark.svg" alt="" width="38" height="25">
+        Office of the Student Regent
+      </span>
+      <button class="icon-btn" id="drawerClose" type="button" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <form class="drawer__search" id="drawerSearchForm" role="search" aria-label="Search this site">
+      <label class="sr-only" for="drawerSearch">Search announcements, meetings, initiatives and resources</label>
+      <input class="input" id="drawerSearch" type="search" placeholder="Search records…" autocomplete="off">
+    </form>
+    <nav class="drawer__nav" aria-label="All sections">
+      <a href="#home" data-nav>Home <span aria-hidden="true">→</span></a>
+      <a href="#about" data-nav>About the Office <span aria-hidden="true">→</span></a>
+      <a href="#announcements" data-nav>Announcements <span aria-hidden="true">→</span></a>
+      <a href="#board-meetings" data-nav>Board Meeting archive <span aria-hidden="true">→</span></a>
+      <a href="#initiatives" data-nav>Initiatives <span aria-hidden="true">→</span></a>
+      <a href="#resources" data-nav>Student resources <span aria-hidden="true">→</span></a>
+      <a href="#academic-calendar" data-nav>Academic calendar <span aria-hidden="true">→</span></a>
+      <a href="#track" data-nav>Track my concern <span aria-hidden="true">→</span></a>
+      <a href="#help" data-nav>Student help <span aria-hidden="true">→</span></a>
+      <a class="drawer__link--ideal" href="#ideal-bulsu" data-nav>Build your Ideal BulSU <span aria-hidden="true">→</span></a>
+    </nav>
+    <div class="drawer__section">
+      <h2>Quick actions</h2>
+      <a class="btn btn--red btn--block" href="#help" data-nav>Raise a concern</a>
+      <a class="btn btn--ghost btn--block" href="#board-meetings" data-nav>Open the Board archive</a>
+      <button class="btn btn--ghost btn--block" id="drawerCmd" type="button">Command palette <span class="drawer__kbd" aria-hidden="true">Ctrl/⌘ K</span></button>
+      <button class="btn btn--ghost btn--block" id="replayTourBtn" type="button">Replay the quick tour</button>
+    </div>
+    <p class="drawer__note">Press <span class="drawer__kbd">/</span> to search, or <span class="drawer__kbd">Ctrl/⌘ K</span> to jump to any record.</p>
+  </div>
+</div>
+
+<!-- Command palette -->
+<div class="cmd" id="cmd" aria-hidden="true">
+  <div class="cmd__backdrop" id="cmdBackdrop"></div>
+  <div class="cmd__panel" role="dialog" aria-modal="true" aria-labelledby="cmdTitle">
+    <div class="cmd__head">
+      <h2 class="sr-only" id="cmdTitle">Command palette</h2>
+      <label class="sr-only" for="cmdInput">Jump to a record or page</label>
+      <input id="cmdInput" type="text" autocomplete="off" placeholder="Jump to a record, page or action…" role="combobox" aria-expanded="false" aria-controls="cmdList" aria-autocomplete="list">
+      <button class="icon-btn" id="cmdClose" type="button" aria-label="Close the command palette">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cmd__list" id="cmdList" role="listbox" aria-label="Results"></div>
+    <div class="cmd__hint">
+      <span><b class="mono">↑ ↓</b> to move</span>
+      <span><b class="mono">Enter</b> to open</span>
+      <span><b class="mono">Esc</b> to close</span>
+    </div>
+  </div>
+</div>
+
+<main class="main" id="main">
+  <!-- ================= HOME ================= -->
+  <section class="page" id="page-home" aria-current="true" aria-labelledby="home-title">
+    <div class="hero-wrap">
+      <div class="shell">
+        <div class="hero">
+          <div class="hero__copy">
+            <span class="hero__kicker">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="m3 9 9-6 9 6H3Z"/><path d="M5 10v8M9 10v8M15 10v8M19 10v8M3 20h18"/></svg>
+              Board of Regents · Student representation
+            </span>
+            <h1 class="hero__title" id="home-title">Office of the<br><span>Student Regent</span></h1>
+            <p class="hero__lead">The Office of the Student Regent represents BulSU students in the Board of Regents — the official record for announcements, Board Meeting documents, initiatives, and verified student resources.</p>
+            <div class="hero__actions">
+              <a class="btn btn--red" href="#announcements" data-nav>
+                <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg>
+                View announcements
+              </a>
+              <a class="btn btn--ghost" href="#board-meetings" data-nav>Board records</a>
+              <button class="btn btn--ghost hero__cmd" id="heroCmd" type="button">
+                Jump to anything <span class="hero__kbd" aria-hidden="true">Ctrl/⌘ K</span>
+              </button>
+            </div>
+            <p class="hero__meta">
+              <span><b>Location</b> City of Malolos, Bulacan</span>
+              <span><b>Updates</b> Verified only</span>
+              <span><b>Office hours</b> Monday to Friday</span>
+            </p>
+          </div>
+
+          <div class="hero__stage">
+            <span class="hero__plate" aria-hidden="true"></span>
+            <span class="hero__plate hero__plate--deep" aria-hidden="true"></span>
+            <article class="hero__card">
+              <div class="hero__card-head">
+                <span class="eyebrow">The mandate</span>
+                <h2>What the Office does</h2>
+              </div>
+              <ul class="hero__card-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Student positions carried to the Board of Regents</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Consultations with students and student councils</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Verified announcements and meeting records</li>
+              </ul>
+              <p class="hero__card-note">Where a record is not yet supplied, this site keeps an empty state instead of invented content.</p>
+              <div class="hero__card-actions">
+                <a class="btn btn--red btn--sm" href="#about" data-nav>Understand the mandate</a>
+                <a class="btn btn--ghost btn--sm" href="#help" data-nav>Find student support</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The record at a glance -->
+    <div class="home-band home-band--alt">
+      <div class="shell">
+        <div class="sec-head">
+          <div class="sec-head__text">
+            <span class="eyebrow">Published by the OSR</span>
+            <h2 class="sec-head__title">The record at a glance</h2>
+          </div>
+          <a class="link" href="#search" data-nav>Search every record
+            <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="dash-stats" id="dashStats">
+          <a class="dash-stat" href="#announcements" data-nav><b id="dashAnn">0</b><span>Announcements</span></a>
+          <a class="dash-stat" href="#board-meetings" data-nav><b id="dashBoard">0</b><span>Board meetings</span></a>
+          <a class="dash-stat" href="#initiatives" data-nav><b id="dashInit">0</b><span>Initiatives</span></a>
+          <a class="dash-stat" href="#resources" id="dashSavedBtn" data-nav><b id="dashSavedCount">0</b><span>Saved resources</span></a>
+        </div>
+        <p class="note">Every entry below is a record held by the Office. Nothing is listed until it is verified.</p>
+      </div>
+    </div>
+
+    <!-- Announcements + up next -->
+    <div class="home-band">
+      <div class="shell">
+        <div class="split">
+          <div>
+            <div class="sec-head">
+              <div class="sec-head__text">
+                <span class="eyebrow">From the Office</span>
+                <h2 class="sec-head__title">Latest announcements</h2>
+                <p class="sec-head__lead">Verified updates only. Filter by category, or search the full archive.</p>
+              </div>
+              <a class="link" href="#announcements" data-nav>Open the archive
+                <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div class="dash-chips" id="homeAnnFilters" role="group" aria-label="Filter announcements by category"></div>
+            <div class="feed__list" id="homeAnnouncements" role="list"></div>
+          </div>
+          <aside class="stack" aria-label="Board meetings and university dates">
+            <div>
+              <h3 class="card-title card-title--sm" id="upnext-title">Up next</h3>
+              <div class="upnext mt-3" id="upnext">
+                <div class="upnext__date" id="upnextDate"><b>--</b><br>---</div>
+                <div class="upnext__body">
+                  <b id="upnextTitle">No upcoming Board Meeting</b>
+                  <span class="small muted" id="upnextMeta">Records appear once the Office publishes them</span>
+                  <a class="link" href="#board-meetings" data-nav>View archive</a>
+                </div>
+              </div>
+            </div>
+            <div id="dashCalendar">
+              <div class="sec-head mb-3">
+                <h3 class="card-title card-title--sm">Upcoming dates</h3>
+                <div class="row">
+                  <span class="count-badge" id="dashCalCount">0</span>
+                  <button class="btn btn--sm btn--ghost" id="dashCalPause" type="button" aria-pressed="false">Pause</button>
+                </div>
+              </div>
+              <div id="dashCalList" class="stack"></div>
+              <div class="empty" id="dashCalEmpty" role="status" hidden>No upcoming events.</div>
+              <p class="note" id="dashCalMeta"></p>
+              <a class="link" href="#academic-calendar" data-nav>Full calendar
+                <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </aside>
+        </div>
+        <div class="notice mt-6">
+          <b>Verified records only.</b> Announcements, Board documents and initiatives are published when the Office confirms them. Where a record is missing, the site says so rather than filling the gap.
+        </div>
+      </div>
+    </div>
+
+    <!-- Board records -->
+    <div class="home-band home-band--alt">
+      <div class="shell">
+        <div class="sec-head">
+          <div class="sec-head__text">
+            <span class="eyebrow">Transparency</span>
+            <h2 class="sec-head__title">Board records</h2>
+            <p class="sec-head__lead">Meeting number, date, academic year, type, and the documents that have been released.</p>
+          </div>
+          <a class="link" href="#board-meetings" data-nav>Full archive
+            <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="board-list" id="homeBoard"></div>
+      </div>
+    </div>
+
+    <!-- Resources -->
+    <div class="home-band">
+      <div class="shell">
+        <div class="sec-head">
+          <div class="sec-head__text">
+            <span class="eyebrow">For students</span>
+            <h2 class="sec-head__title">Documents &amp; resources</h2>
+          </div>
+          <div class="row">
+            <a class="link" href="#resources" data-nav>Browse all
+              <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+            <button class="btn btn--sm btn--ghost" id="viewSaved" type="button">Saved (<span id="savedCount">0</span>)</button>
+          </div>
+        </div>
+        <div class="resource-list" id="homeResources"></div>
+      </div>
+    </div>
+
+    <!-- Initiatives -->
+    <div class="home-band home-band--alt">
+      <div class="shell">
+        <div class="sec-head">
+          <div class="sec-head__text">
+            <span class="eyebrow">Current work</span>
+            <h2 class="sec-head__title">Programs &amp; initiatives</h2>
+            <p class="sec-head__lead">Each initiative is listed with its purpose, status and date — no slogans, no financial dashboard.</p>
+          </div>
+          <a class="link" href="#initiatives" data-nav>All initiatives
+            <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="grid grid--2" id="homeInitiatives"></div>
+      </div>
+    </div>
+
+    <!-- Build Your Ideal BulSU -->
+    <div class="home-band" id="buildCta">
+      <div class="shell">
+        <div class="card card--head">
+          <span class="eyebrow">Student consultation · 10 points</span>
+          <h2 class="card-title" id="buildCtaTitle">Build Your Ideal BulSU</h2>
+          <p class="small muted">Where should BulSU focus next? Split 10 points across 7 areas — learning, campus, mobility, connectivity, well-being, culture, and student voice. It takes about a minute, and you can add your build to the public Pulse.</p>
+          <div class="row">
+            <a class="btn btn--red" href="#ideal-bulsu" data-nav>Start building</a>
+            <a class="btn btn--ghost" href="#ideal-bulsu" data-nav>See what students prioritize</a>
+          </div>
+          <div class="notice">
+            <b id="buildCtaTop">BulSU Pulse</b>
+            <p class="small muted">Aggregates only — individual builds are never shown.</p>
+            <p class="mono small"><span id="buildCtaBuilds">0</span> builds so far · <span id="buildCtaPeriod">Loading the latest period…</span></p>
+            <div id="buildCtaBars" class="pulse-bars"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Student help -->
+    <div class="home-band home-band--alt">
+      <div class="shell">
+        <div class="sec-head">
+          <div class="sec-head__text">
+            <span class="eyebrow">Student help</span>
+            <h2 class="sec-head__title" id="home-help-title">If you need help, start here</h2>
+            <p class="sec-head__lead">Four straightforward paths: raise a concern, contact the Office, use verified support services, or read the policies first.</p>
+          </div>
+          <a class="link" href="#help" data-nav>Open Student help
+            <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="quick">
+          <a class="quick__card" href="#help" data-help="concern" data-nav>
+            <b>Raise a concern</b>
+            <span>Tell the Office what happened, where and when, who is affected, and what outcome you need. The form saves as you type.</span>
+            <span class="link">Start a concern
+              <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a class="quick__card" href="#help" data-help="contact" data-nav>
+            <b>Contact the Office</b>
+            <span>Office hours, email, telephone and the official pages. Messages are triaged within office hours.</span>
+            <span class="link">Contact details
+              <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a class="quick__card" href="#help" data-help="support" data-nav>
+            <b>Student support</b>
+            <span>Guidance and counseling, crisis hotlines and university services — with direct links, not generic advice.</span>
+            <span class="link">Support services
+              <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a class="quick__card" href="#resources" data-nav>
+            <b>Policies &amp; documents</b>
+            <span>Student handbook, Magna Carta reference materials, the Manual of Operations and the transparency seal.</span>
+            <span class="link">Go to resources
+              <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+
+        <div class="notice mt-6">
+          <b>Contact the Office</b>
+          <p class="small muted">Office hours, email, telephone and the official pages are listed in full on the Student help page, and stay in step with the Office's own settings.</p>
+          <div class="row"><a class="btn btn--red btn--sm" href="#help" data-nav>Contact the OSR</a></div>
+        </div>
+      </div>
+    </div>
+  </section>

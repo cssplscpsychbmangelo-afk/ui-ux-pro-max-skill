@@ -128,7 +128,7 @@
   --font-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   --font-masthead:"Bricolage Grotesque", var(--font-sans);
   --text-base:16px;
-  --text-2xs:11px; --text-xs:12.5px; --text-sm:14px; --text-md:16px; --text-lg:18.5px;
+  --text-2xs:12px; --text-xs:13px; --text-sm:14px; --text-md:16px; --text-lg:18.5px;
   --text-xl:22px; --text-2xl:28px; --text-3xl:36px; --text-4xl:46px;
   --leading-tight:1.15; --leading-normal:1.65; --leading-relaxed:1.75;
   --track-tight:-.02em;
@@ -1121,6 +1121,11 @@ button.tag:hover{border-color:var(--color-primary); color:var(--red-800)}
 }
 @media(hover:none){
   .dash-stat:hover,.card--link:hover,.initiative:hover,.board-row:hover,.search-result:hover,.feed__action:hover{transform:none}
+  /* Fingers need the same target as a thumb: every control that is allowed to
+     be compact under a mouse grows to 44px on a touch screen. */
+  .btn--sm,.dash-chip,.ab-jump button,.tag,button.tag,details summary,.pulse-tab,
+  .pulse-viewtab,.chip,.welcome-close,.track-saved__open,.step-rail li button,.pulse-step{min-height:44px}
+  .tag,button.tag,.chip{padding-top:8px; padding-bottom:8px}
 }
 @media(hover:hover){
   .dash-stat:hover{transform:translateY(-1px)}

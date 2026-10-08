@@ -24,15 +24,22 @@ dialog), and a "More" disclosure that keeps the primary nav at five routes.
 | Path | What it is |
 | --- | --- |
 | `index.html` | The assembled, shipping page — byte-for-byte what was tested (448 KB, CSS and JS inline except `js/cms-integration.js`). |
-| `build/osr.css` | The design system source (1115 lines, 19 numbered sections). Inlined into `index.html` by `build/assemble.py`. |
-| `build/head.html` | `<head>`: meta, Open Graph, tab-identity link order, self-hosted Bricolage wordmark face, opening `<style>`. |
-| `build/body1.html` … `body5.html` | Body markup split by page group: chrome + home · archive pages · about/help/track/calendar · Build Your Ideal BulSU · footer + overlays. |
-| `build/block1.js` … `block4.js` | The patched inline scripts (engine, guides/CMS-guide layer, small helpers, build-CTA). |
-| `build/patch2.py`, `build/dialog-module.js`, `build/style-map.json` | The deterministic patch that turns the original upstream `block1.js` into the patched one: focus management, route normalisation, category chips, saved-only filtering, stepper semantics, and the inline-style → class mapping. |
-| `build/assemble.py` | Rebuilds `index.html` from the parts above. |
-| `build/smoke.mjs` | jsdom smoke test: renders the page, walks every route, asserts lists/rows/tabs render, reports console errors. Needs `jsdom` (installed at `OSR/` root in the source repo). |
+| `design-system.html` | The design system reference page served at `/design-system.html`: live colour swatches, measured contrast ratios, type and space scales, component specimens and the enforced rules. It reads the same stylesheet, so it cannot drift. |
+| `rebuild/osr.css` | The design system source (1115 lines, 19 numbered sections). Inlined into `index.html` by `rebuild/assemble.py`. |
+| `rebuild/head.html` | `<head>`: meta, Open Graph, tab-identity link order, self-hosted Bricolage wordmark face, opening `<style>`. |
+| `rebuild/body1.html` … `rebuild/body5.html` | Body markup split by page group: chrome + home · archive pages · about/help/track/calendar · Build Your Ideal BulSU · footer + overlays. |
+| `rebuild/block1.js` … `rebuild/block4.js` | The patched inline scripts (engine, guides/CMS-guide layer, small helpers, build-CTA). |
+| `rebuild/patch2.py`, `rebuild/dialog-module.js`, `rebuild/style-map.json` | The deterministic patch that turns the original upstream `block1.js` into the patched one: focus management, route normalisation, category chips, saved-only filtering, stepper semantics, and the inline-style → class mapping. |
+| `rebuild/assemble.py` | Rebuilds `index.html` from the parts above. |
+| `rebuild/smoke.mjs` | jsdom smoke test: renders the page, walks every route, asserts lists/rows/tabs render, reports console errors. Needs `jsdom` (installed at `OSR/` root in the source repo). |
 
 ## Rebuilding
+
+`rebuild/` holds the parts (named so that this repository's `build/` ignore rule
+does not swallow them). `rebuild/assemble.py` rebuilds `index.html`;
+`rebuild/refresh-design-system.py` re-inlines the current `osr.css` into
+`design-system.html`; `rebuild/smoke.mjs` and `rebuild/ds-check.mjs` render both
+pages in jsdom, walk every route, and report console errors.
 
 ```bash
 # 1. put the pieces back in a checkout of the real repository
@@ -44,7 +51,7 @@ cd OSR/server && npm test
 cd ../osr-website && python3 -m http.server 8080 --bind 0.0.0.0
 ```
 
-`build/assemble.py` regenerates `index.html` from `head.html` + `osr.css` +
+`rebuild/assemble.py` regenerates `index.html` from `head.html` + `osr.css` +
 `body1–5.html` + `block1–4.js`; it reports inline-style count, duplicate ids and
 the heading sequence, and all three must come back clean (0 inline styles,
 no duplicates).

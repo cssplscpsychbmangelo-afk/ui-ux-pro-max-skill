@@ -1,0 +1,272 @@
+
+  <!-- ================= ANNOUNCEMENTS ================= -->
+  <section class="page" id="page-announcements" aria-labelledby="ann-title">
+    <div class="shell">
+      <div class="page-head">
+        <a class="link back-link" href="#home" data-nav>
+          <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Back to home
+        </a>
+        <span class="eyebrow">Verified updates</span>
+        <h1 class="page-head__title" id="ann-title">Announcements</h1>
+        <p class="page-head__lead">Every announcement the Office has published, newest first. Each entry carries its category, date, summary and full content.</p>
+        <div class="page-head__meta">
+          <span class="count-badge" id="annCount">0 posts</span>
+          <span class="note">Published only when verified by the OSR.</span>
+        </div>
+      </div>
+
+      <div class="filter-bar" role="search">
+        <div class="field">
+          <label for="annSearch">Search announcements</label>
+          <input class="input" id="annSearch" type="search" placeholder="Title or summary" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="annCategory">Category</label>
+          <select class="select" id="annCategory">
+            <option value="all">All categories</option>
+            <option value="Accomplishment Report">Accomplishment Report</option>
+            <option value="Announcement &amp; Letter">Announcement &amp; Letter</option>
+            <option value="Student Advisory">Student Advisory</option>
+            <option value="Statement">Statement</option>
+            <option value="Update from the BOR">Update from the BOR</option>
+            <option value="Meetings / Dialogues / Speakerships">Meetings / Dialogues / Speakerships</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="annSort">Order</label>
+          <select class="select" id="annSort">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="feed__list" id="annList" role="list"></div>
+      <div class="empty" id="annEmpty" role="status">
+        <b>No announcements yet</b>
+        <p>This archive is ready for verified OSR announcements. Each post will include its category, date, summary, full content, an optional image and any external link.</p>
+        <div class="row row--center"><a class="btn btn--sm btn--ghost" href="#board-meetings" data-nav>Ask the OSR</a></div>
+      </div>
+
+      <div class="about-card mt-6">
+        <h2>About this archive</h2>
+        <p>Announcements are published with the Office's own wording and its verification mark. Nothing is posted on behalf of a third party, and no announcement is invented to fill the page.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BOARD MEETINGS ================= -->
+  <section class="page" id="page-board-meetings" aria-labelledby="board-title">
+    <div class="shell">
+      <div class="page-head">
+        <a class="link back-link" href="#home" data-nav>
+          <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Back to home
+        </a>
+        <span class="eyebrow">Board of Regents — official record</span>
+        <h1 class="page-head__title" id="board-title">Board Meeting archive</h1>
+        <p class="page-head__lead">Chronological and searchable. Each record shows the meeting number, date, academic year, type, description, minutes and related documents when released.</p>
+        <div class="page-head__meta">
+          <span class="count-badge" id="boardCount">0 meetings</span>
+          <span class="note">Records are not invented. Documents appear only when released.</span>
+        </div>
+      </div>
+
+      <div class="filter-bar" role="search">
+        <div class="field">
+          <label for="boardSearch">Search records</label>
+          <input class="input" id="boardSearch" type="search" placeholder="Title, number or description" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="boardYear">Academic year</label>
+          <select class="select" id="boardYear">
+            <option value="all">All academic years</option>
+            <option value="2024-2025">AY 2024–2025</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="boardType">Meeting type</label>
+          <select class="select" id="boardType">
+            <option value="all">All types</option>
+            <option value="Regular Meeting">Regular Meeting</option>
+            <option value="Special Meeting">Special Meeting</option>
+            <option value="Emergency Meeting">Emergency Meeting</option>
+            <option value="Consultation">Consultation</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="boardDate">Date range</label>
+          <select class="select" id="boardDate">
+            <option value="all">All dates</option>
+            <option value="30">Last 30 days</option>
+            <option value="90">Last 90 days</option>
+            <option value="180">Last 180 days</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="board-list" id="boardList"></div>
+      <div class="empty" id="boardEmpty" role="status">
+        <b>The archive is ready for verified records</b>
+        <p>This is where Board Meeting records will be listed, chronologically, with meeting number, academic year, type, description, minutes and related documents. Nothing appears here until the Office releases it.</p>
+        <div class="row row--center">
+          <a class="btn btn--sm btn--red" href="#help" data-nav>Raise a Board matter</a>
+          <a class="btn btn--sm btn--ghost" href="#about" data-nav>About the Office</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INITIATIVES ================= -->
+  <section class="page" id="page-initiatives" aria-labelledby="init-title">
+    <div class="shell">
+      <div class="page-head">
+        <a class="link back-link" href="#home" data-nav>
+          <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Back to home
+        </a>
+        <span class="eyebrow">Work of the Office</span>
+        <h1 class="page-head__title" id="init-title">Initiatives</h1>
+        <p class="page-head__lead">Programs and services of the Office, each with its purpose, status, date, category and any supporting link.</p>
+        <div class="page-head__meta">
+          <span class="count-badge" id="initCount">0 initiatives</span>
+          <button class="btn btn--ghost btn--sm" id="initViewBtn" type="button" aria-pressed="false">Timeline view</button>
+        </div>
+      </div>
+
+      <div class="filter-bar" role="search">
+        <div class="field">
+          <label for="initSearch">Search initiatives</label>
+          <input class="input" id="initSearch" type="search" placeholder="Title, purpose or description" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="initStatus">Status</label>
+          <select class="select" id="initStatus">
+            <option value="all">All statuses</option>
+            <option value="PLANNED">Planned</option>
+            <option value="ONGOING">Ongoing</option>
+            <option value="COMPLETED">Completed</option>
+            <option value="ON HOLD">On hold</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="initCategory">Category</label>
+          <select class="select" id="initCategory">
+            <option value="all">All categories</option>
+            <option value="Accomplishment">Accomplishment</option>
+            <option value="Consultation">Consultation</option>
+            <option value="Medical Mission">Medical Mission</option>
+            <option value="Scholarship">Scholarship</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid grid--2" id="initList"></div>
+      <div class="timeline" id="initTimeline" hidden></div>
+      <div class="empty" id="initEmpty" role="status">
+        <b>No initiatives published yet</b>
+        <p>Each initiative will be listed with its title, purpose, status, date, category and links. Nothing is listed until the Office records it.</p>
+        <div class="row row--center"><a class="btn btn--sm btn--ghost" href="#help" data-nav>Suggest a program</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESOURCES ================= -->
+  <section class="page" id="page-resources" aria-labelledby="res-title">
+    <div class="shell">
+      <div class="page-head">
+        <a class="link back-link" href="#home" data-nav>
+          <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Back to home
+        </a>
+        <span class="eyebrow">For students</span>
+        <h1 class="page-head__title" id="res-title">Student resources</h1>
+        <p class="page-head__lead">Handbooks, policies, academic documents and verified support services. Save anything you need to your own list on this device.</p>
+        <div class="page-head__meta">
+          <span class="count-badge" id="resCount">0 resources</span>
+          <button class="btn btn--ghost btn--sm" id="resSavedBtn" type="button">Saved (<span id="resSavedCount">0</span>)</button>
+        </div>
+      </div>
+
+      <div class="filter-bar" role="search">
+        <div class="field">
+          <label for="resSearch">Search resources</label>
+          <input class="input" id="resSearch" type="search" placeholder="Title, category or description" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="resCategory">Category</label>
+          <select class="select" id="resCategory">
+            <option value="all">All categories</option>
+            <option value="STUDENT RIGHTS &amp; POLICIES">Student rights &amp; policies</option>
+            <option value="ACADEMIC">Academic</option>
+            <option value="STUDENT GOVERNANCE">Student governance</option>
+            <option value="STUDENT SUPPORT">Student support</option>
+            <option value="OFFICIAL DOCUMENTS">Official documents</option>
+          </select>
+        </div>
+        <div class="field field--action">
+          <span class="field__label" id="resSavedOnlyLabel">Your list</span>
+          <button class="btn btn--ghost btn--sm" id="resSavedOnly" type="button" aria-pressed="false" aria-describedby="resSavedOnlyLabel">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+            Saved only
+          </button>
+        </div>
+      </div>
+
+      <div class="resource-list" id="resList" role="list"></div>
+      <div class="empty" id="resEmpty" role="status">
+        <b>No resources match</b>
+        <p>Try another category or search term. Resources are listed with a verified title, category, short description and source link only.</p>
+      </div>
+
+      <div class="about-card mt-6">
+        <h2>About these resources</h2>
+        <p>Listings use general categories adapted to the Office of the Student Regent. An item appears only when it has a verified title, category, short description and source link. Saved items stay on your device — nothing is uploaded.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SITE SEARCH ================= -->
+  <section class="page" id="page-search" aria-labelledby="search-title">
+    <div class="shell shell--narrow">
+      <div class="page-head">
+        <a class="link back-link" href="#home" data-nav>
+          <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Back to home
+        </a>
+        <span class="eyebrow">Site-wide search</span>
+        <h1 class="page-head__title" id="search-title">Search</h1>
+        <p class="page-head__lead">Covers announcements, Board Meeting records, initiatives and resources. Search runs in your browser, so it works without a connection to the API.</p>
+        <div class="page-head__meta"><span class="count-badge" id="searchCount">0 results</span></div>
+      </div>
+
+      <div class="filter-bar" role="search">
+        <div class="field">
+          <label for="siteSearch">Search term</label>
+          <input class="input" id="siteSearch" type="search" placeholder="Try “handbook”, “BOR” or “scholarship”" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="siteScope">Section</label>
+          <select class="select" id="siteScope">
+            <option value="all">All sections</option>
+            <option value="announcements">Announcements</option>
+            <option value="board">Board records</option>
+            <option value="initiatives">Initiatives</option>
+            <option value="resources">Resources</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="searchResults"></div>
+      <div class="empty" id="searchEmpty" role="status" hidden>
+        <b>No results</b>
+        <p>Try a different term, or check the spelling. You can also browse the announcements and resources archives directly.</p>
+        <div class="row row--center">
+          <a class="btn btn--sm btn--ghost" href="#announcements" data-nav>Announcements</a>
+          <a class="btn btn--sm btn--ghost" href="#resources" data-nav>Resources</a>
+        </div>
+      </div>
+    </div>
+  </section>

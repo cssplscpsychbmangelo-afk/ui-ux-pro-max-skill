@@ -1,0 +1,257 @@
+
+  <section class="page" id="page-ideal-bulsu" aria-labelledby="idealTitle">
+    <div class="shell">
+      <div class="page-head">
+        <a class="link back-link" href="#home" data-nav>
+          <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Back to home
+        </a>
+        <span class="eyebrow">OSR consultation</span>
+        <h1 class="page-head__title" id="idealTitle">Build Your Ideal BulSU</h1>
+        <p class="page-head__lead">You have 10 points. Where should BulSU focus? Distribute them across seven areas, then read what other students have prioritised. Builds are anonymous and only ever published as totals.</p>
+        <div class="page-head__meta">
+          <span class="count-badge">10 points</span>
+          <span class="note">Aggregates only — no individual build is ever shown.</span>
+        </div>
+      </div>
+
+      <div class="pulse-tabs" role="tablist" aria-label="Build and Pulse">
+        <button type="button" role="tab" id="pulseTabBuild" aria-selected="true" aria-controls="pulseBuildTab" data-tab="build" class="pulse-tab is-active">Build</button>
+        <button type="button" role="tab" id="pulseTabPulse" aria-selected="false" aria-controls="pulsePulseTab" data-tab="pulse" class="pulse-tab" tabindex="-1">BulSU Pulse</button>
+      </div>
+
+      <!-- BUILD PANEL -->
+      <div id="pulseBuildTab" role="tabpanel" aria-labelledby="pulseTabBuild">
+        <div class="pulse-pointsbar">
+          <div class="pulse-pointsbar__count" >
+            <div class="mono" >Points left</div>
+            <div >
+              <span id="pulsePointsLeft" >10</span>
+              <span class="mono" >of 10</span>
+            </div>
+          </div>
+          <div class="pulse-pointsbar__track" >
+            <div id="pulsePointsTrack" class="pulse-points-track" role="progressbar" aria-label="Points allocated" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-valuetext="0 of 10 points allocated"><div id="pulsePointsFill" class="pulse-points-fill" aria-hidden="true" ></div></div>
+            <div class="mono" ><span>0 used</span><span>10 used</span></div>
+          </div>
+          <div class="pulse-pointsbar__actions">
+            <button id="pulseReset" class="btn btn--sm btn--ghost">Reset</button>
+            <button id="pulseShowResult" class="btn btn--sm btn--gold" disabled><span class="btn__label" id="pulseShowResultLabel">Show my build</span></button>
+          </div>
+        </div>
+
+        <div id="pulseAlloc" class="pulse-alloc"></div>
+
+        <div class="pulse-map card reveal is-visible" id="pulseLiveMap">
+          <h3 >Where did you put your 10 points?</h3>
+          <p class="small muted" >Personal preview only. Your build joins the public Pulse only if you submit it.</p>
+          <div id="pulseLiveBars" class="pulse-livebars" ></div>
+          <p id="pulseLiveCaption" class="mono" ></p>
+          <div class="mono" >Visual weight shows your priorities. No chart library — just bars.</div>
+        </div>
+
+        <div id="pulseResult" hidden class="pulse-result reveal is-visible" >
+          <div class="about-card" >
+            <div class="eyebrow" >Your result</div>
+            <h3 >Your Ideal BulSU</h3>
+            <p class="small muted" >Your 10-point allocation — university priorities, not a personality test.</p>
+          </div>
+          <div id="pulseResultBody" class="card"></div>
+          <div id="pulseSubmitArea" class="card">
+            <h4 >Add your build to the BulSU Pulse?</h4>
+            <p class="small muted" >Only your 7 numbers are sent — and only when you choose.</p>
+            <div >
+              <button id="pulseSubmit" class="btn btn--sm btn--gold">Add to BulSU Pulse</button>
+              <button id="pulseEdit" class="btn btn--sm btn--ghost">Keep editing</button>
+            </div>
+            <div id="pulseSubmitFeedback" class="mono" ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PULSE PANEL -->
+      <div id="pulsePulseTab" role="tabpanel" aria-labelledby="pulseTabPulse" hidden>
+        <div class="card card--head">
+          <div >
+            <div class="eyebrow" >BulSU Pulse</div>
+            <h3 >What are students prioritizing?</h3>
+            <p class="small muted" >Points share = how students split their 10 points. It is a pulse, not a vote count.</p>
+          </div>
+          <div >
+            <div id="pulsePulseCount" class="mono" >0 builds</div>
+            <div class="mono"  id="pulsePulsePeriodLabel">—</div>
+          </div>
+        </div>
+
+        <div class="dash-stats" id="pulseOverviewStats" aria-live="polite"></div>
+
+        <div id="pulseGeneralStatus" class="card card--head">
+          <div>
+            <div class="mono" >Data status</div>
+            <div id="pulseLiveState" class="mono" role="status" aria-live="polite" >Checking for submissions</div>
+            <div id="pulseLiveDetail" class="small muted" >Only real stored submissions are shown.</div>
+          </div>
+          <div >
+            <div class="mono"  id="pulseGeneralStatusNumber">0</div>
+            <div class="mono" >builds</div>
+            <button id="pulseRefreshButton" class="btn btn--sm btn--ghost" type="button" >Refresh</button>
+          </div>
+        </div>
+
+        <!-- PULSE EXPLORER: one navigation, six views. -->
+        <div id="pulseViewNav" class="pulse-viewnav" role="tablist" aria-label="BulSU Pulse views">
+          <button type="button" role="tab" id="pulseTabPeriod" class="pulse-viewtab is-active" data-pview="period" aria-controls="pulseViewPeriod" aria-selected="true">This period</button>
+          <button type="button" role="tab" id="pulseTabMonthly" class="pulse-viewtab" data-pview="monthly" aria-controls="pulseViewMonthly" aria-selected="false" tabindex="-1">Monthly</button>
+          <button type="button" role="tab" id="pulseTabYearly" class="pulse-viewtab" data-pview="yearly" aria-controls="pulseViewYearly" aria-selected="false" tabindex="-1">Yearly</button>
+          <button type="button" role="tab" id="pulseTabTrend" class="pulse-viewtab" data-pview="trend" aria-controls="pulseViewTrend" aria-selected="false" tabindex="-1">Trends</button>
+          <button type="button" role="tab" id="pulseTabHistory" class="pulse-viewtab" data-pview="history" aria-controls="pulseViewHistory" aria-selected="false" tabindex="-1">History</button>
+          <button type="button" role="tab" id="pulseTabShare" class="pulse-viewtab" data-pview="share" aria-controls="pulseViewShare" aria-selected="false" tabindex="-1">Share &amp; report</button>
+        </div>
+
+        <!-- 1. THIS PERIOD -->
+        <div id="pulseViewPeriod" class="pulse-view" role="tabpanel" aria-labelledby="pulseTabPeriod" tabindex="0">
+          <div class="pulse-period-nav">
+            <button id="pulsePeriodPrev" class="pulse-step" type="button" aria-label="Previous period"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <select id="pulsePeriodSelect" class="select" aria-label="Choose a period"></select>
+            <button id="pulsePeriodNext" class="pulse-step" type="button" aria-label="Next period"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
+            <button id="pulsePeriodLatest" class="btn btn--sm btn--ghost" type="button">Latest</button>
+            <span id="pulsePeriodMeta" class="pulse-nav-meta"></span>
+          </div>
+          <p id="pulsePeriodTakeaway" class="pulse-takeaway" hidden></p>
+          <div id="pulsePeriodTop"></div>
+          <div id="pulsePeriodBars"></div>
+          <div id="pulsePeriodEmpty" class="ideal-empty" hidden ></div>
+        </div>
+
+        <!-- 2. MONTHLY -->
+        <div id="pulseViewMonthly" class="pulse-view" role="tabpanel" aria-labelledby="pulseTabMonthly" tabindex="0" hidden>
+          <div class="pulse-period-nav">
+            <button id="pulseMonthPrev" class="pulse-step" type="button" aria-label="Previous month"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <select id="pulseMonthSelect" class="select" aria-label="Choose a month"></select>
+            <button id="pulseMonthNext" class="pulse-step" type="button" aria-label="Next month"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
+            <span id="pulseMonthlyMeta" class="pulse-nav-meta"></span>
+          </div>
+          <p id="pulseMonthlyTakeaway" class="pulse-takeaway" hidden></p>
+          <div id="pulseMonthlyTop"></div>
+          <div id="pulseMonthlyBars"></div>
+          <div id="pulseMonthlyChange" class="grid grid--2"></div>
+        </div>
+
+        <!-- 3. YEARLY -->
+        <div id="pulseViewYearly" class="pulse-view" role="tabpanel" aria-labelledby="pulseTabYearly" tabindex="0" hidden>
+          <div class="pulse-period-nav">
+            <button id="pulseYearPrev" class="pulse-step" type="button" aria-label="Previous year"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <select id="pulseYearSelect" class="select" aria-label="Choose a year"></select>
+            <button id="pulseYearNext" class="pulse-step" type="button" aria-label="Next year"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
+            <span id="pulseYearlyMeta" class="pulse-nav-meta"></span>
+          </div>
+          <p id="pulseYearlyTakeaway" class="pulse-takeaway" hidden></p>
+          <div id="pulseYearlyTop"></div>
+          <div id="pulseYearlyBars"></div>
+          <div id="pulseYearlyCompare" class="grid grid--2"></div>
+        </div>
+
+        <!-- 4. TRENDS -->
+        <div id="pulseViewTrend" class="pulse-view" role="tabpanel" aria-labelledby="pulseTabTrend" tabindex="0" hidden>
+          <div class="pill-row">
+            <label class="mono"  for="pulseTrendSelect">Category</label>
+            <select id="pulseTrendSelect" class="select" >
+              <option value="learning">Learning</option>
+              <option value="campus">Campus</option>
+              <option value="mobility">Mobility</option>
+              <option value="connectivity">Connectivity</option>
+              <option value="wellbeing">Well-being</option>
+              <option value="cultureCommunity">Culture &amp; Community</option>
+              <option value="studentVoice">Student Voice</option>
+            </select>
+            <span class="mono" >Share of all points, month by month</span>
+          </div>
+          <p id="pulseTrendTakeaway" class="pulse-takeaway" hidden></p>
+          <div id="pulseTrendSummary" class="pill-row"></div>
+          <div id="pulseTrendChart" class="pulse-chartbox"></div>
+          <div id="pulseTrendNoData" class="mono" ></div>
+        </div>
+
+        <!-- 5. HISTORY -->
+        <div id="pulseViewHistory" class="pulse-view" role="tabpanel" aria-labelledby="pulseTabHistory" tabindex="0" hidden>
+          <div class="pill-row">
+            <h4 >Every period with submissions</h4>
+            <span class="spacer"></span>
+            <span id="pulseHistoryMeta" class="mono" ></span>
+            <button id="pulseHistoryToggle" class="btn btn--sm btn--ghost" type="button" hidden>Show earlier periods</button>
+          </div>
+          <div class="pulse-tablewrap">
+            <table class="pulse-table">
+              <thead>
+                <tr>
+                  <th scope="col">Period</th>
+                  <th scope="col">Builds</th>
+                  <th scope="col">Top priority</th>
+                  <th scope="col">Top share</th>
+                  <th scope="col">Runner-up</th>
+                </tr>
+              </thead>
+              <tbody id="pulseHistoryBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 6. SHARE AND REPORT -->
+        <div id="pulseViewShare" class="pulse-view" role="tabpanel" aria-labelledby="pulseTabShare" tabindex="0" hidden>
+          <div class="pulse-share-head">
+            <div>
+              <h4>Snapshot</h4>
+              <div id="pulseSnapshotPeriod" class="pulse-share-period">—</div>
+            </div>
+            <button id="pulseSnapshotShare" class="btn btn--sm btn--ghost" type="button">Copy text</button>
+          </div>
+          <p id="pulseSnapshotTakeaway" class="pulse-takeaway" hidden></p>
+          <div id="pulseSnapshotBars" ></div>
+          <div class="mono"  id="pulseSnapshotMeta">Based on builds • Student priorities for this period.</div>
+
+          <hr class="pulse-rule"/>
+
+          <div class="pulse-share-head">
+            <div>
+              <h4>Generate report</h4>
+              <p class="small muted" >Objective PDF — totals, distribution, top priorities, methodology. OSR red-and-white style.</p>
+            </div>
+            <div class="pulse-share-actions">
+              <select id="pulseReportPeriod" class="select" aria-label="Report period"></select>
+              <button id="pulseReportBtn" class="btn btn--sm" ><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="white" stroke-width="1.8" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download PDF</button>
+            </div>
+          </div>
+        </div>
+
+        <div >
+          <h4 >How OSR uses the Pulse</h4>
+          <div class="pulse-howgrid" >
+            <div><b >Listen</b><p class="small muted" >Build priorities provide an additional way for the OSR to hear what students are currently emphasizing.</p></div>
+            <div><b >Consult</b><p class="small muted" >Results can help inform consultations and identify areas that may need further engagement.</p></div>
+            <div><b >Discuss</b><p class="small muted" >Recurring or notable priorities may help inform possible programs or matters prepared for Board Meetings.</p></div>
+            <div><b >Follow up</b><p class="small muted" >Where appropriate, the OSR can communicate developments or next steps connected to issues raised.</p></div>
+          </div>
+          <p class="mono" >Not every result becomes a program, reaches the Board, or guarantees action — participation is voluntary consultation.</p>
+        </div>
+
+        <details >
+          <summary >About the Pulse <span class="mono" >expand</span></summary>
+          <div class="small muted" >
+            <p >Each participant receives 10 points and decides how to distribute them across the 7 areas. Submissions are anonymous and aggregated. Results are a student pulse — voluntary consultation, not a binding vote, election, or scientifically representative survey, and should not be assumed to represent every BulSU student.</p>
+            <p >Periods and percentages depend only on actual stored responses. The dashboard never downloads raw responses — only small aggregate objects per period are loaded and percentages are calculated locally.</p>
+          </div>
+        </details>
+
+        <div class="mono"  id="pulseDataIntegrity"></div>
+      </div>
+
+      <div class="about-card" >
+        <h3 >These results provide the OSR an additional way to listen</h3>
+        <p class="small muted" >Recurring student priorities are one source of input when the OSR considers consultations, possible initiatives, and matters for discussion. Language: <i>student pulse, student priorities, anonymous student input, consultation data, collective responses.</i></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ACADEMIC CALENDAR -->
+  </section>

@@ -1,0 +1,337 @@
+[
+ [
+  "<p style=\"margin:8px 0 0; font-size:13.5px\">",
+  "<p class=\"note-p\">",
+  "note-p"
+ ],
+ [
+  "<a href=\"#announcements\" data-nav style=\"color:var(--red); font-weight:600; text-decoration:none;\">",
+  "<a class=\"link-inline\" href=\"#announcements\" data-nav>",
+  "inline link a"
+ ],
+ [
+  "<a href=\"#announcements\" data-nav style=\"color:var(--red); font-weight:600; text-decoration:none; \">",
+  "<a class=\"link-inline\" href=\"#announcements\" data-nav>",
+  "inline link b"
+ ],
+ [
+  "<a href=\"${a.externalLink}\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--red); font-weight:600; font-size:12px; text-decoration:none; display:inline-flex; align-items:center; gap:4px\">",
+  "<a class=\"feed__link\" href=\"${a.externalLink}\" target=\"_blank\" rel=\"noopener\">",
+  "feed link"
+ ],
+ [
+  "<div style=\"min-width:0\">",
+  "<div class=\"min-w-0\">",
+  "min-w-0"
+ ],
+ [
+  "<div style=\"display:flex; gap:6px; align-items:center; flex-wrap:wrap\">",
+  "<div class=\"chip-row\">",
+  "chip-row a"
+ ],
+ [
+  "<div style=\"display:flex; gap:6px; flex-wrap:wrap\">",
+  "<div class=\"chip-row\">",
+  "chip-row b"
+ ],
+ [
+  "<div style=\"display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin-bottom:3px\">",
+  "<div class=\"chip-row mb-1\">",
+  "chip-row mb3"
+ ],
+ [
+  "<div style=\"display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin-bottom:2px\">",
+  "<div class=\"chip-row mb-1\">",
+  "chip-row mb2"
+ ],
+ [
+  "<div style=\"display:flex; gap:8px; align-items:center; margin-top:2px\">",
+  "<div class=\"timeline__row\">",
+  "timeline row"
+ ],
+ [
+  "<div style=\"display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px\">",
+  "<div class=\"chip-row mb-3\">",
+  "chip-row mb12"
+ ],
+ [
+  "<div style=\"display:grid; gap:8px; margin-top:8px\">",
+  "<div class=\"stack stack--sm mt-2\">",
+  "stack sm mt"
+ ],
+ [
+  "<div style=\"display:grid; gap:8px\">",
+  "<div class=\"stack stack--sm\">",
+  "stack sm"
+ ],
+ [
+  "<div style=\"margin-top:10px; display:flex; gap:6px; flex-wrap:wrap; align-items:center\">",
+  "<div class=\"tag-row\">",
+  "tag-row"
+ ],
+ [
+  "<div style=\"padding:16px; text-align:center; color:var(--stone)\">",
+  "<div class=\"cmd__empty\">",
+  "cmd empty"
+ ],
+ [
+  "<div style=\"white-space:pre-wrap\">",
+  "<div class=\"pre-wrap\">",
+  "pre-wrap"
+ ],
+ [
+  "<div style=\"position:relative; padding-left:12px\">",
+  "<div class=\"timeline__item\">",
+  "timeline item"
+ ],
+ [
+  "<div style=\"position:absolute; left:-7px; top:4px; width:12px; height:12px; border-radius:999px; background:var(--red); border:2px solid white; box-shadow:0 0 0 1px var(--line)\"></div>",
+  "<div class=\"timeline__dot\" aria-hidden=\"true\"></div>",
+  "timeline dot"
+ ],
+ [
+  "<div style=\"margin-top:12px; border:1px solid var(--line); border-radius:8px; overflow:hidden\">",
+  "<div class=\"media-frame\">",
+  "media frame"
+ ],
+ [
+  "<div style=\"background:var(--paper-2); padding:40px; text-align:center; color:var(--stone)\">",
+  "<div class=\"media-frame__placeholder\">",
+  "media placeholder"
+ ],
+ [
+  "<p style=\"margin-top:12px\">",
+  "<p class=\"mt-3\">",
+  "p mt-3"
+ ],
+ [
+  "<h4 style=\"margin-top:14px\">",
+  "<h4 class=\"mt-3\">",
+  "h4 mt-3"
+ ],
+ [
+  "<ul style=\"margin:0; padding-left:16px\">",
+  "<ul class=\"doc-list\">",
+  "doc list"
+ ],
+ [
+  "<div style=\"height:120px; background:var(--paper-2); border-bottom:1px solid var(--line); display:grid; place-items:center; color:var(--stone); font-size:12px\">",
+  "<div class=\"initiative__image\">",
+  "initiative image"
+ ],
+ [
+  "<div style=\"border:1px solid var(--line); border-radius:8px; background:var(--paper-2); padding:10px\">",
+  "<div class=\"pulse-stat pulse-stat--paper\">",
+  "pulse stat paper"
+ ],
+ [
+  "<div style=\"border:1px solid var(--line); border-radius:8px; background:white; padding:10px\">",
+  "<div class=\"pulse-stat\">",
+  "pulse stat"
+ ],
+ [
+  "<div style=\"font:700 18px var(--font-display); margin-top:2px\">",
+  "<div class=\"pulse-stat__value pulse-stat__value--lg\">",
+  "pulse value lg"
+ ],
+ [
+  "<div style=\"font:700 14px var(--font-display); margin-top:2px\">",
+  "<div class=\"pulse-stat__value\">",
+  "pulse value"
+ ],
+ [
+  "<div style=\"font:600 13px var(--font-display); margin-top:2px\">",
+  "<div class=\"pulse-stat__value pulse-stat__value--sm\">",
+  "pulse value sm"
+ ],
+ [
+  "<sup style=\"color:var(--red); font-weight:700; margin-left:2px\" title=\"Subject to adjustment\">",
+  "<sup class=\"sup-flag\" title=\"Subject to adjustment\">",
+  "sup flag"
+ ],
+ [
+  "<span style=\"display:inline-flex; align-items:center; gap:6px\">",
+  "<span class=\"anon-flag\">",
+  "anon flag"
+ ],
+ [
+  "<span style=\"background:var(--ink); color:white; font:700 10px 'IBM Plex Mono',monospace; padding:2px 6px; border-radius:999px; letter-spacing:.04em\">ANONYMOUS</span>",
+  "<span class=\"anon-flag__badge\">ANONYMOUS</span>",
+  "anon badge"
+ ],
+ [
+  "<span style=\"font-size:11px; color:var(--ink)\">",
+  "<span class=\"board-row__year\">",
+  "board year"
+ ],
+ [
+  "<strong style=\"font-size:15px\">",
+  "<strong class=\"pulse-overview__value--sm\">",
+  "overview value sm"
+ ],
+ [
+  "<span class=\"mono\" style=\"background:var(--red-3); border:1px solid #FFD0D6; color:var(--red); padding:4px 8px; border-radius:6px; font-size:11px\">",
+  "<span class=\"mono chip chip--red\">",
+  "chip red"
+ ],
+ [
+  "<span class=\"mono\" style=\"background:var(--paper-2); border:1px solid var(--line); color:var(--ink); padding:4px 8px; border-radius:6px; font-size:11px\">",
+  "<span class=\"mono chip\">",
+  "chip plain"
+ ],
+ [
+  "<div class=\"pulse-period-summary\" style=\"margin-top:12px\">",
+  "<div class=\"pulse-period-summary mt-3\">",
+  "period summary"
+ ],
+ [
+  "<div class=\"pulse-chiprow\" style=\"margin-top:12px\">",
+  "<div class=\"pulse-chiprow\">",
+  "pulse chiprow"
+ ],
+ [
+  "<div class=\"pulse-overview__cell\" style=\"grid-column:1/-1\">",
+  "<div class=\"pulse-overview__cell\">",
+  "overview cell"
+ ],
+ [
+  "<div class=\"empty\" style=\"grid-column:1 / -1\">",
+  "<div class=\"empty\">",
+  "empty grid"
+ ],
+ [
+  "<div class=\"empty\" style=\"padding:12px\">",
+  "<div class=\"empty empty--inline\">",
+  "empty inline"
+ ],
+ [
+  "<div class=\"initiative__purpose\" style=\"margin-top:10px\">",
+  "<div class=\"initiative__purpose\">",
+  "initiative purpose"
+ ],
+ [
+  "<div class=\"mono\" style=\"font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--stone)\">",
+  "<div class=\"mono pulse-stat__label\">",
+  "stat label"
+ ],
+ [
+  "<div class=\"mono\" style=\"font-size:10.5px; color:var(--stone)\">",
+  "<div class=\"mono pulse-stat__sub\">",
+  "stat sub 10.5"
+ ],
+ [
+  "<div class=\"mono\" style=\"font-size:11px; color:var(--stone)\">",
+  "<div class=\"mono pulse-stat__sub\">",
+  "stat sub 11"
+ ],
+ [
+  "<div class=\"mono\" style=\"font-size:11px; color:var(--stone); margin-top:8px\">",
+  "<div class=\"mono pulse-stat__sub mt-2\">",
+  "stat sub mt"
+ ],
+ [
+  "<div class=\"mono\" style=\"font-size:10px; color:var(--stone); margin-top:6px; text-align:center\">",
+  "<div class=\"mono pulse-stat__sub\">",
+  "stat sub center"
+ ],
+ [
+  "<span class=\"mono\" style=\"font-size:11px; color:var(--stone); font-weight:500\">",
+  "<span class=\"mono pulse-stat__sub\">",
+  "mono sub span"
+ ],
+ [
+  "<span class=\"mono\" style=\"font-size:10.5px; color:var(--stone)\">",
+  "<span class=\"mono pulse-stat__sub\">",
+  "mono sub 10.5"
+ ],
+ [
+  "<span class=\"mono\" style=\"font-size:10px; color:var(--red)\">",
+  "<span class=\"mono pulse-stat__label\">",
+  "mono label red"
+ ],
+ [
+  "<span class=\"mono small\" style=\"color:var(--stone); font-size:11px; letter-spacing:0.06em; text-transform:uppercase\">",
+  "<span class=\"mono small muted\">",
+  "mono small caps"
+ ],
+ [
+  "<span class=\"status ${statusClass}\" style=\"font-size:10px\">",
+  "<span class=\"status ${statusClass}\">",
+  "status strip 1"
+ ],
+ [
+  "<span class=\"status ${statusClass}\" style=\"display:inline-flex; align-items:center; gap:4px\">",
+  "<span class=\"status ${statusClass}\">",
+  "status strip 2"
+ ],
+ [
+  "<div class=\"small muted\" style=\"margin-top:10px\">",
+  "<div class=\"small muted mt-3\">",
+  "small muted 10"
+ ],
+ [
+  "<div class=\"small muted\" style=\"margin-top:8px\">",
+  "<div class=\"small muted mt-2\">",
+  "small muted 8"
+ ],
+ [
+  "<div class=\"small muted\" style=\"margin-top:4px\">",
+  "<div class=\"small muted mt-1\">",
+  "small muted 4"
+ ],
+ [
+  "<div class=\"small muted\" style=\"margin-top:2px\">",
+  "<div class=\"small muted\">",
+  "small muted 2"
+ ],
+ [
+  "<div class=\"small muted\" style=\"padding:6px 0\">",
+  "<div class=\"small muted\">",
+  "small muted pad"
+ ],
+ [
+  "<p class=\"small muted\" style=\"margin:6px 0 0\">",
+  "<p class=\"small muted mt-1\">",
+  "p small muted"
+ ],
+ [
+  "<span class=\"badge\" style=\"background:white; color:var(--stone); border-style:dashed\">",
+  "<span class=\"badge badge--soft\">",
+  "badge soft"
+ ],
+ [
+  "<div class=\"row\" style=\"justify-content:center; margin-top:12px\">",
+  "<div class=\"row row--center mt-3\">",
+  "row center 12"
+ ],
+ [
+  "<div class=\"row\" style=\"justify-content:center; margin-top:8px\">",
+  "<div class=\"row row--center mt-2\">",
+  "row center 8"
+ ],
+ [
+  "<div class=\"row\" style=\"justify-content:flex-end; gap:8px\">",
+  "<div class=\"row row--end\">",
+  "row end"
+ ],
+ [
+  "<div class=\"row\" style=\"margin-top:12px\">",
+  "<div class=\"row mt-3\">",
+  "row 12"
+ ],
+ [
+  "<div class=\"resource__cat\" style=\"display:inline-flex; align-items:center; gap:5px\">",
+  "<div class=\"resource__cat\">",
+  "resource cat"
+ ],
+ [
+  "<span class=\"mono small muted\" style=\"display:inline-flex; align-items:center; gap:5px\">",
+  "<span class=\"mono small muted\">",
+  "mono small muted a"
+ ],
+ [
+  "<span class=\"mono small muted\" style=\"display:inline-flex; align-items:center; gap:6px; font-size:11px\">",
+  "<span class=\"mono small muted\">",
+  "mono small muted b"
+ ]
+]
